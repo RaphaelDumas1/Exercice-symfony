@@ -1,0 +1,12 @@
+{% for type in types %}
+<tr>
+        <td>{{ type.nom }}</td>
+        <td>{{ type.description }}</td>
+        <td>{{ type.endurancedefaut }}</td>
+        <td>{{ type.agilitedefaut }}</td>
+        <td>{{ type.intelligencedefaut }}</td>
+        <a href='/type/editer/{{ type.id }}'>Editer</a>
+        <a href='/type/supprimer/{{ type.id }}'>Supprimer</a>
+<tr></br>
+{% endfor %}
+
