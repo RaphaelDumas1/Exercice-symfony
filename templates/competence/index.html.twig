@@ -1,0 +1,14 @@
+{% for competence in competences %}
+<tr>
+        <td>{{ competence.nom }}</td>
+        <td>{{ competence.decription }}</td>
+        <td>{{ competence.degat }}</td>
+        <td>{{ competence.stun }}</td>
+        <td>{{ competence.type.nom }}</td>
+        <a href='/competence/editer/{{ competence.id }}'>Editer</a>
+        <a href='/competence/supprimer/{{ competence.id }}'>Supprimer</a>
+<tr></br>
+{% endfor %}
+<a href="/home/">Accueil</a>
+<a href="/competence/ajouter/">Nouvelle competence</a>
+

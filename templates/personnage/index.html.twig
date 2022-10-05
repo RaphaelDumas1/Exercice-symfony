@@ -1,0 +1,17 @@
+{% for personnage in personnages %}
+<tr>
+        <td>{{ personnage.nom }}</td>
+        <td>{{ personnage.datenaissance|date("m/d/Y") }}</td>
+        <td>{{ personnage.description }}</td>
+        <td>{{ personnage.niveau }}</td>
+        <td>{{ personnage.endurance }}</td>
+        <td>{{ personnage.agilite }}</td>
+        <td>{{ personnage.intelligence }}</td>
+        <td>{{ personnage.vie }}</td>
+        <td>{{ personnage.type.nom }}</td>
+        <a href='/personnage/editer/{{ personnage.id }}'>Editer</a>
+        <a href='/personnage/supprimer/{{ personnage.id }}'>Supprimer</a>
+<tr></br>
+{% endfor %}
+<a href="/home/">Accueil</a>
+<a href="/personnage/ajouter/">Nouveau personnage</a>
